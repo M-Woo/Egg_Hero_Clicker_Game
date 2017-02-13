@@ -15,7 +15,7 @@ html {
 }
 .container-fluid{
 	background-color: #FFF9C4;
-	height: 1300px;
+	height: 1000px;
   	background:  url(https://38.media.tumblr.com/48eb374bf5fe48870c6196eeee0079bf/tumblr_nocv0jAJhh1rznhmjo3_500.gif)
 	no-repeat center center fixed; 
 	background-size: cover;
@@ -52,7 +52,6 @@ button{
   transform: translateY(30px);
   border: none;
   outline:none;
-
 }
 #row1 {
     text-align:center;
@@ -60,31 +59,22 @@ button{
     background-color: rgba(1,1,1,0);
     height: 250px;
 }
-#row2 {
-	text-align:center;
-	height: 300px;
-	display: flex;
+#one {
+	display: none;
+	height: 150px;
+	width: 150px;
+	background-color: rgba(1,1,1,0.5);
+	border-radius: 100px;
 }
-#row3 {
-	text-align:center;
-	height: 300px;
-	display: flex;
+img {
+	display: none;
+	height: 150px;
+	width: 150px;
+	background-color: rgba(1,1,1,0.5);
+	border-radius: 100px;
 }
-.upgrade{
-	height: 400px;
-	width: 800px;
-	border-radius: 50px;
-	background-color: rgba(1,1,1,0.3);
-	display: inline-block;
-	align-content: space-between;
-}
-.powerup{
-	height: 400px;
-	width: 800px;
-	border-radius: 50px;
-	background-color: rgba(1,1,1,0.3);
-	display: inline-block;
-	align-content: space-between;
 
-}
+
+
+
 
