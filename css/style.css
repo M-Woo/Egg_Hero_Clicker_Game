@@ -1,1 +1,89 @@
-style.css
+html { 
+  /*background:  url(https://media.giphy.com/media/vIIK13PK2Tuvu/giphy.gif)*/
+  /*background:  url(https://s-media-cache-ak0.pinimg.com/originals/72/60/f1/7260f16eb3bfa6e1a1431e064ef90518.gif)*/
+  /*background:  url(http://pa1.narvii.com/6035/38127eeb05bcd5d3dad91b03452053d78fcd7056_hq.gif)*/
+  /*background:  url(https://s-media-cache-ak0.pinimg.com/originals/22/3d/fa/223dfa052ba40eb60d903a453a70a57a.gif)*/
+  /*background:  url(http://media.giphy.com/media/GfigWD5Nl2rUA/giphy.gif)*/
+  /*background:  url(http://pa1.narvii.com/5875/1f6050f263faa1d4a01ee85cb6a02c5c7c916160_hq.gif)*/
+  /*background:  url(http://images.says.com/uploads/story_source/source_image/392474/472d.gif)*/
+  /*background:  url(https://s-media-cache-ak0.pinimg.com/originals/e1/ee/bb/e1eebb79b11c56e8be6d91d5c4ec1f46.gif)*/
+  /*background:  url(https://38.media.tumblr.com/48eb374bf5fe48870c6196eeee0079bf/tumblr_nocv0jAJhh1rznhmjo3_500.gif)*/
+  /*no-repeat center center fixed; */
+  border-radius: 35px;
+  /*background-size: contain;*/
+}
+.container-fluid{
+	background-color: #FFF9C4;
+	height: 1300px;
+  	background:  url(https://38.media.tumblr.com/48eb374bf5fe48870c6196eeee0079bf/tumblr_nocv0jAJhh1rznhmjo3_500.gif)
+	no-repeat center center fixed; 
+	background-size: cover;
+}
+h1{
+	color: black;
+	font-family: 'VT323', monospace;
+	font-size: 65px;
+}
+#title{
+	background-color: rgba(1,1,1,0.4); 
+	width: 20%;
+	border-radius: 50px;
+	color: white;	
+}
+#score{
+	background-color: rgba(1,1,1,0.4); 
+	width: 20%;
+	border-radius: 50px;
+	color: white;
+}
+button{
+	margin: 20px;
+	background:url(http://www.freepngimg.com/thumb/egg/13-egg-png-image-thumb.png) no-repeat;
+	cursor:pointer;
+    width: 200px;
+    height: 200px;
+    border: none;
+    outline:none;
+}
+.button:active {
+  /*background-color: #3e8e41;*/
+  /*box-shadow: 0 5px #666;*/
+  transform: translateY(30px);
+  border: none;
+  outline:none;
+
+}
+#row1 {
+    text-align:center;
+    border-radius: 50px;
+    background-color: rgba(1,1,1,0);
+    height: 250px;
+}
+#row2 {
+	text-align:center;
+	height: 300px;
+	display: flex;
+}
+#row3 {
+	text-align:center;
+	height: 300px;
+	display: flex;
+}
+.upgrade{
+	height: 400px;
+	width: 800px;
+	border-radius: 50px;
+	background-color: rgba(1,1,1,0.3);
+	display: inline-block;
+	align-content: space-between;
+}
+.powerup{
+	height: 400px;
+	width: 800px;
+	border-radius: 50px;
+	background-color: rgba(1,1,1,0.3);
+	display: inline-block;
+	align-content: space-between;
+
+}
+
