@@ -9,7 +9,8 @@ html {
   /*background:  url(https://s-media-cache-ak0.pinimg.com/originals/e1/ee/bb/e1eebb79b11c56e8be6d91d5c4ec1f46.gif)*/
   /*background:  url(https://38.media.tumblr.com/48eb374bf5fe48870c6196eeee0079bf/tumblr_nocv0jAJhh1rznhmjo3_500.gif)*/
   /*no-repeat center center fixed; */
-  border-radius: 35px;
+  /*border-radius: 35px;*/
+  /*padding: 50;*/
   /*background-size: contain;*/
 }
 .container-fluid{
@@ -30,7 +31,7 @@ h1{
 	border-radius: 50px;
 	color: white;	
 }
-#score{
+#scoreContainer{
 	background-color: rgba(1,1,1,0.4); 
 	width: 20%;
 	border-radius: 50px;
