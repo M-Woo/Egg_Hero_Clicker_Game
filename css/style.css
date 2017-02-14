@@ -13,10 +13,13 @@ html {
   /*padding: 50;*/
   /*background-size: contain;*/
 }
+#score{
+	color: white;
+}
 .container-fluid{
 	background-color: #FFF9C4;
-	height: 1000px;
-  	background:  url(https://38.media.tumblr.com/48eb374bf5fe48870c6196eeee0079bf/tumblr_nocv0jAJhh1rznhmjo3_500.gif)
+	height: 1200px;
+    background:  url(https://s-media-cache-ak0.pinimg.com/originals/72/60/f1/7260f16eb3bfa6e1a1431e064ef90518.gif)
 	no-repeat center center fixed; 
 	background-size: cover;
 }
@@ -26,54 +29,77 @@ h1{
 	font-size: 65px;
 }
 #title{
-	background-color: rgba(1,1,1,0.4); 
+	background-color: rgba(120,114,255,0.4);
 	width: 20%;
 	border-radius: 50px;
 	color: white;	
 }
 #scoreContainer{
-	background-color: rgba(1,1,1,0.4); 
+	background-color: rgba(120,114,255,0.4);
 	width: 20%;
 	border-radius: 50px;
 	color: white;
 }
 button{
-	margin: 20px;
+	margin: 50px;
 	background:url(http://www.freepngimg.com/thumb/egg/13-egg-png-image-thumb.png) no-repeat;
 	cursor:pointer;
     width: 200px;
     height: 200px;
     border: none;
     outline:none;
+    font-family: 'VT323', monospace;
+    font-size: 35px;
 }
 .button:active {
-  /*background-color: #3e8e41;*/
-  /*box-shadow: 0 5px #666;*/
-  transform: translateY(30px);
-  border: none;
-  outline:none;
+   transform: translateY(40px);
+   border: none;
+   outline:none;
+}
+.upgrade{
+
+}
+.upgrade:active{
+   transform: translateY(40px);
+   border: none;
+   outline:none;
+   cursor:pointer;
 }
 #row1 {
     text-align:center;
     border-radius: 50px;
     background-color: rgba(1,1,1,0);
     height: 250px;
+    margin-bottom: 80px;
 }
 #one {
 	display: none;
 	height: 150px;
 	width: 150px;
-	background-color: rgba(1,1,1,0.5);
+	background-color: rgba(120,114,255,0.4);
 	border-radius: 100px;
 }
 img {
 	display: none;
 	height: 150px;
 	width: 150px;
-	background-color: rgba(1,1,1,0.5);
+	background-color: rgba(120,114,255,0.4);
 	border-radius: 100px;
 }
+p {
+	display: none;
+	font-family: 'VT323', monospace;
+	font-size: 20px;
+	height: 29px;
+	width: 150px;
+	background-color: rgba(62,59,127,0.5);
+	border-radius: 50px;
+	color: white;
 
+}
+#secondRow{
+	margin-bottom: 200px; 
+}
 
 
 
