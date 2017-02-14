@@ -1,9 +1,11 @@
 
 
 var score = 0;
-$('#scoreContainer').append('<div id="score">' + score + '</div>');
-var chickenOnePrice = 10
+var chickenOnePrice = 5
 var chickenTwoPrice = 20
+$('#scoreContainer').append('<div id="score">' + score + '</div>');
+$('.oneTextContainer').append('<div id="oneText">' + chickenOnePrice + '</div>');
+
 
 // MAIN BUTTON 
 $('.button').on('click', function(){
@@ -14,15 +16,20 @@ $('.button').on('click', function(){
 });
 
 // FIRST UPGRADE BUTTON
+// if else to check if below 0
 $('#one').on('click', function(){
-	score= score + 5
-	buyOne()
+	if (score>chickenOnePrice) {
+	chickenOnePrice+=chickenOnePrice
+	score-=chickenOnePrice
 	var intervalOne = setInterval(function(){
 	score += 5;
 	$('#score').remove()
 	$('#scoreContainer').append('<div id="score">' + score + '</div>');
+	console.log(chickenOnePrice + 'chickenOnePrice')
+	$('#oneText').remove()
+	$('.oneTextContainer').append('<div id="oneText">'+'cost: ' + chickenOnePrice*2 +' +5eggs/1sec' + '</div>');
 	},1000);
-	console.log(buyOne)
+}
 })
 
 function updateScore() {
@@ -68,12 +75,6 @@ function allCondition() {
 	}
 }
 
-function buyOne () {
-	if (score >= chickenOnePrice){
-		$('#score').remove()
-		$('#scoreContainer').append('<div id="score">' + score + '</div>');
-	}
-}
 
 
 
