@@ -18,7 +18,7 @@ html {
 }
 .container-fluid{
 	background-color: #FFF9C4;
-	height: 1200px;
+	height: 1600px;
     background:  url(https://s-media-cache-ak0.pinimg.com/originals/72/60/f1/7260f16eb3bfa6e1a1431e064ef90518.gif)
 	no-repeat center center fixed; 
 	background-size: cover;
@@ -73,32 +73,32 @@ button{
     margin-bottom: 80px;
 }
 #one {
-	display: none;
+	/*display: none;*/
 	height: 150px;
 	width: 150px;
 	background-color: rgba(120,114,255,0.4);
 	border-radius: 100px;
 }
 img {
-	display: none;
+	/*display: none;*/
 	height: 150px;
 	width: 150px;
 	background-color: rgba(120,114,255,0.4);
 	border-radius: 100px;
 }
 p {
-	display: none;
+	/*display: none;*/
 	font-family: 'VT323', monospace;
-	font-size: 20px;
-	height: 60px;
-	width: 150px;
-	background-color: rgba(62,59,127,0.5);
+	font-size: 50px;
+	height: 170px;
+	width: 420px;
+	background-color: rgba(120,114,255,0.4);
 	border-radius: 50px;
 	color: white;
 
 }
 #secondRow{
-	margin-bottom: 200px; 
+	margin-bottom: 100px; 
 }
 
 
