@@ -74,21 +74,21 @@ button{
     margin-bottom: 80px;
 }
 #one {
-	/*display: none;*/
+	display: none;
 	height: 150px;
 	width: 150px;
 	background-color: rgba(120,114,255,0.4);
 	border-radius: 100px;
 }
 img {
-	/*display: none;*/
+	display: none;
 	height: 150px;
 	width: 150px;
 	background-color: rgba(120,114,255,0.4);
 	border-radius: 100px;
 }
 p {
-	/*display: none;*/
+	display: none;
 	font-family: 'VT323', monospace;
 	font-size: 50px;
 	height: 170px;
