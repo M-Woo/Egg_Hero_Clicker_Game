@@ -27,6 +27,7 @@ h1{
 	color: black;
 	font-family: 'VT323', monospace;
 	font-size: 65px;
+	margin-top: 50px;
 }
 #title{
 	background-color: rgba(120,114,255,0.4);
@@ -100,7 +101,5 @@ p {
 #secondRow{
 	margin-bottom: 100px; 
 }
-
-
 
 

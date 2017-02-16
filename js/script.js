@@ -2,6 +2,7 @@
 
 var score = 0;
 
+//Starting eggs per second
 var chickenOnePriceAdd =  0;
 var chickenTwoPriceAdd = 0;
 var chickenThreePriceAdd = 0;
@@ -11,6 +12,7 @@ var chickenSixPriceAdd = 0;
 var chickenSevenPriceAdd = 0;
 var chickenEightPriceAdd = 0;
 
+//cost of chickens
 var chickenOnePrice =   10
 var chickenTwoPrice =   100
 var chickenThreePrice = 500
@@ -19,6 +21,20 @@ var chickenFivePrice =  50000
 var chickenSixPrice =   500000
 var chickenSevenPrice = 5000000
 var chickenEightPrice = 50000000
+
+//Audio
+var quackSound = $('#quack')[0];
+quackSound.volume = .5;
+var backgroundSound = $('#background')[0];
+backgroundSound.volume = 1;
+backgroundSound.loop = true;
+var firstSound = $('#first')[0];
+firstSound.volume = .5;
+
+
+
+
+backgroundSound.play();
 
 $('#scoreContainer').append('<div id="score">' + score + '</div>');
 
@@ -34,6 +50,7 @@ $('.eightTextContainer').append('<div id="eightText">' + 'Cost: 50000000eggs' + 
 // MAIN BUTTON 
 $('.button').on('click', function(){
 	console.log(score);
+	quackSound.play();
 	score++
 	updateScore();
 	allCondition();
@@ -42,6 +59,7 @@ $('.button').on('click', function(){
 // if else to check if below 0
 $('#one').on('click', function(){
 	if (score>chickenOnePrice) {
+		quackSound.play();
 		score-=chickenOnePrice
 		chickenOnePrice+=chickenOnePrice
 		chickenOnePriceAdd += 1;
@@ -59,6 +77,7 @@ $('#one').on('click', function(){
 
 $('#two').on('click', function(){
 	if (score>chickenTwoPrice) {
+		quackSound.play();
 		console.log('works')
 		score-=chickenTwoPrice
 		chickenTwoPrice+=chickenTwoPrice
@@ -76,6 +95,7 @@ $('#two').on('click', function(){
 
 $('#three').on('click', function(){
 	if (score>chickenThreePrice) {
+		quackSound.play();
 		console.log('works')
 		score-=chickenThreePrice
 		chickenThreePrice+=chickenThreePrice
@@ -93,6 +113,7 @@ $('#three').on('click', function(){
 
 $('#four').on('click', function(){
 	if (score>chickenFourPrice) {
+		quackSound.play();
 		console.log('works')
 		score-=chickenFourPrice
 		chickenFourPrice+=chickenFourPrice
@@ -111,6 +132,7 @@ $('#four').on('click', function(){
 
 $('#five').on('click', function(){
 	if (score>chickenFivePrice) {
+		quackSound.play();
 		console.log('works')
 		score-=chickenFivePrice
 		chickenFivePrice+=chickenFivePrice
@@ -129,6 +151,7 @@ $('#five').on('click', function(){
 
 $('#six').on('click', function(){
 	if (score>chickenSixPrice) {
+		quackSound.play();
 		console.log('works')
 		score-=chickenSixPrice
 		chickenSixPrice+=chickenSixPrice
@@ -147,6 +170,7 @@ $('#six').on('click', function(){
 
 $('#seven').on('click', function(){
 	if (score>chickenSevenPrice) {
+		quackSound.play();
 		console.log('works')
 		score-=chickenSevenPrice
 		chickenSevenPrice+=chickenSevenPrice
@@ -165,6 +189,16 @@ $('#seven').on('click', function(){
 
 $('#eight').on('click', function(){
 	if (score>chickenEightPrice) {
+		quackSound.play();
+		firstSound.play();
+		$('img').addClass('animated infinite flash');
+		$('.button').addClass('animated infinite flash')
+		$('#title').addClass('animated infinite slideOutUp');
+		$('#scoreContainer').addClass('animated infinite swing')
+		$('p').addClass('animated infinite hinge')
+		$('body').addClass('animated infinite jello')
+		$('img').addClass('animated infinite bounce');
+		$('.button').addClass('animated infinite flash')
 		console.log('works')
 		score-=chickenEightPrice
 		chickenEightPrice+=chickenEightPrice
@@ -224,6 +258,48 @@ function allCondition() {
 }
 
 
+$(document).ready(function(){
+    animateDiv();
+    
+});
+
+function makeNewPosition(){
+    
+    // Get viewport dimensions (remove the dimension of the div)
+    var h = $(window).height() - 100;
+    var w = $(window).width() - 100;
+    
+    var nh = Math.floor(Math.random() * h);
+    var nw = Math.floor(Math.random() * w);
+    
+    return [nh,nw];    
+    
+}
+
+function animateDiv(){
+    var newq = makeNewPosition();
+    var oldq = $('.a').offset();
+    var speed = calcSpeed([oldq.top, oldq.left], newq);
+    
+    $('.a').animate({ top: newq[0], left: newq[1] }, speed, function(){
+      animateDiv();        
+    });
+    
+};
+
+function calcSpeed(prev, next) {
+    
+    var x = Math.abs(prev[1] - next[1]);
+    var y = Math.abs(prev[0] - next[0]);
+    
+    var greatest = x > y ? x : y;
+    
+    var speedModifier = 0.1;
+
+    var speed = Math.ceil(greatest/speedModifier);
+
+    return speed;
+}
 
 
 
