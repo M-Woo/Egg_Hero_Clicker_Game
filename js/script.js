@@ -1,10 +1,3 @@
-// var quackSound;
-
-// function preload() {
-//   quackSound = loadSound('./sounds/58272^quack2.mp3');
-// }
-	
-// console.log(quackSound)
 
 
 var score = 0;
@@ -30,6 +23,9 @@ var chickenSevenPrice = 5000000
 var chickenEightPrice = 50000000
 
 //Audio
+var chaching = $('#chaching')[0];
+chaching.volume = 1;
+
 var quackSound = $('#quack')[0];
 quackSound.volume = .5;
 
@@ -78,12 +74,15 @@ $('.button').on('click', function(){
 // if else to check if below 0
 $('#one').on('click', function(){
 	if (score>chickenOnePrice) {
-		quackSound.play();
+		chaching.play();
+		$('#scoreContainer').addClass('animated flash');
+		console.log($('#scoreContainer').removeClass)
 		score-=chickenOnePrice;
 		chickenOnePrice+=chickenOnePrice;
 		chickenOnePriceAdd += 1;
 		var intervalOne = setInterval(function(){
 		allCondition();
+		$('#scoreContainer').removeClass('animated flash');
 		score += 1;
 		$('#score').remove()
 		$('#scoreContainer').append('<div id="score">' + score + '</div>');
@@ -96,7 +95,7 @@ $('#one').on('click', function(){
 
 $('#two').on('click', function(){
 	if (score>chickenTwoPrice) {
-		quackSound.play();
+		chaching.play();
 		console.log('works')
 		score-=chickenTwoPrice
 		chickenTwoPrice+=chickenTwoPrice
@@ -113,7 +112,7 @@ $('#two').on('click', function(){
 
 $('#three').on('click', function(){
 	if (score>chickenThreePrice) {
-		quackSound.play();
+		chaching.play();
 		console.log('works')
 		score-=chickenThreePrice
 		chickenThreePrice+=chickenThreePrice
@@ -130,7 +129,7 @@ $('#three').on('click', function(){
 
 $('#four').on('click', function(){
 	if (score>chickenFourPrice) {
-		quackSound.play();
+		chaching.play();
 		console.log('works')
 		score-=chickenFourPrice
 		chickenFourPrice+=chickenFourPrice
@@ -148,7 +147,7 @@ $('#four').on('click', function(){
 
 $('#five').on('click', function(){
 	if (score>chickenFivePrice) {
-		quackSound.play();
+		chaching.play();
 		console.log('works')
 		score-=chickenFivePrice
 		chickenFivePrice+=chickenFivePrice
@@ -166,7 +165,7 @@ $('#five').on('click', function(){
 
 $('#six').on('click', function(){
 	if (score>chickenSixPrice) {
-		quackSound.play();
+		chaching.play();
 		console.log('works')
 		score-=chickenSixPrice
 		chickenSixPrice+=chickenSixPrice
@@ -184,7 +183,7 @@ $('#six').on('click', function(){
 
 $('#seven').on('click', function(){
 	if (score>chickenSevenPrice) {
-		quackSound.play();
+		chaching.play();
 		console.log('works')
 		score-=chickenSevenPrice
 		chickenSevenPrice+=chickenSevenPrice
@@ -202,7 +201,7 @@ $('#seven').on('click', function(){
 
 $('#eight').on('click', function(){
 	if (score>chickenEightPrice) {
-		quackSound.play();
+		chaching.play();
 		firstSound.play();
 		$('img').addClass('animated infinite flash');
 		$('.button').addClass('animated infinite flash')
@@ -330,6 +329,6 @@ function allCondition() {
 		$('#eight')[0].style.display = 'block';
 		$('p')[7].style.display = 'block';
 	};
-}
+};
 
 
