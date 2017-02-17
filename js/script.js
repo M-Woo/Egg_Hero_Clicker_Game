@@ -76,7 +76,6 @@ $('#one').on('click', function(){
 	if (score>chickenOnePrice) {
 		chaching.play();
 		$('#scoreContainer').addClass('animated flash');
-		console.log($('#scoreContainer').removeClass)
 		score-=chickenOnePrice;
 		chickenOnePrice+=chickenOnePrice;
 		chickenOnePriceAdd += 1;
@@ -90,51 +89,57 @@ $('#one').on('click', function(){
 		$('#oneText').remove()
 		$('.oneTextContainer').append('<div id="oneText">'+'Cost: ' + chickenOnePrice +'eggs' + ' '+ chickenOnePriceAdd +'eggs/1sec' + '</div>');
 		},1000);
-	}
-})
+	};
+});
 
 $('#two').on('click', function(){
 	if (score>chickenTwoPrice) {
 		chaching.play();
+		$('#scoreContainer').addClass('animated flash');
 		console.log('works')
 		score-=chickenTwoPrice
 		chickenTwoPrice+=chickenTwoPrice
 		chickenTwoPriceAdd += 100;
 		var intervalOne = setInterval(function(){
+		$('#scoreContainer').removeClass('animated flash');
 		score += 50;
 		$('#score').remove()
 		$('#scoreContainer').append('<div id="score">' + score + '</div>');
 		$('#twoText').remove()
 		$('.twoTextContainer').append('<div id="twoText">'+'Cost: ' + chickenTwoPrice +'eggs' + ' '+ chickenTwoPriceAdd +'eggs/1sec' + '</div>');
 		},1000);
-	}
-})
+	};
+});
 
 $('#three').on('click', function(){
 	if (score>chickenThreePrice) {
 		chaching.play();
+		$('#scoreContainer').addClass('animated flash');
 		console.log('works')
 		score-=chickenThreePrice
 		chickenThreePrice+=chickenThreePrice
 		chickenThreePriceAdd += 500;
 		var intervalOne = setInterval(function(){
+		$('#scoreContainer').removeClass('animated flash');
 		score += 250;
 		$('#score').remove()
 		$('#scoreContainer').append('<div id="score">' + score + '</div>');
 		$('#threeText').remove()
 		$('.threeTextContainer').append('<div id="threeText">'+'Cost: ' + chickenThreePrice +'eggs' + ' '+ chickenThreePriceAdd +'eggs/1sec' + '</div>');
 		},1000);
-	}
-})
+	};
+});
 
 $('#four').on('click', function(){
 	if (score>chickenFourPrice) {
 		chaching.play();
+		$('#scoreContainer').addClass('animated flash');
 		console.log('works')
 		score-=chickenFourPrice
 		chickenFourPrice+=chickenFourPrice
 		chickenFourPriceAdd += 5000;
 		var intervalOne = setInterval(function(){
+		$('#scoreContainer').removeClass('animated flash');
 		score += 2500;
 		$('#score').remove()
 		$('#scoreContainer').append('<div id="score">' + score + '</div>');
@@ -142,17 +147,19 @@ $('#four').on('click', function(){
 		$('#fourText').remove()
 		$('.fourTextContainer').append('<div id="fourText">'+'Cost: ' + chickenFourPrice +'eggs' + ' '+ chickenFourPriceAdd +'eggs/1sec' + '</div>');
 		},1000);
-	}
-})
+	};
+});
 
 $('#five').on('click', function(){
 	if (score>chickenFivePrice) {
 		chaching.play();
+		$('#scoreContainer').addClass('animated flash');
 		console.log('works')
 		score-=chickenFivePrice
 		chickenFivePrice+=chickenFivePrice
 		chickenFivePriceAdd += 50000;
 		var intervalOne = setInterval(function(){
+		$('#scoreContainer').removeClass('animated flash');
 		score += 25000;
 		$('#score').remove()
 		$('#scoreContainer').append('<div id="score">' + score + '</div>');
@@ -166,11 +173,13 @@ $('#five').on('click', function(){
 $('#six').on('click', function(){
 	if (score>chickenSixPrice) {
 		chaching.play();
+		$('#scoreContainer').addClass('animated flash');
 		console.log('works')
 		score-=chickenSixPrice
 		chickenSixPrice+=chickenSixPrice
 		chickenSixPriceAdd += 500000;
 		var intervalOne = setInterval(function(){
+		$('#scoreContainer').removeClass('animated flash');
 		score += 250000;
 		$('#score').remove()
 		$('#scoreContainer').append('<div id="score">' + score + '</div>');
@@ -178,17 +187,19 @@ $('#six').on('click', function(){
 		$('#sixText').remove()
 		$('.sixTextContainer').append('<div id="sixText">'+'Cost: ' + chickenSixPrice +'eggs' + ' '+ chickenSixPriceAdd +'eggs/1sec' + '</div>');
 		},1000);
-	}
-})
+	};
+});
 
 $('#seven').on('click', function(){
 	if (score>chickenSevenPrice) {
 		chaching.play();
+		$('#scoreContainer').addClass('animated flash');
 		console.log('works')
 		score-=chickenSevenPrice
 		chickenSevenPrice+=chickenSevenPrice
 		chickenSevenPriceAdd += 5000000;
 		var intervalOne = setInterval(function(){
+		$('#scoreContainer').removeClass('animated flash');
 		score += 2500000;
 		$('#score').remove()
 		$('#scoreContainer').append('<div id="score">' + score + '</div>');
@@ -196,12 +207,13 @@ $('#seven').on('click', function(){
 		$('#sevenText').remove()
 		$('.sevenTextContainer').append('<div id="sevenText">'+'Cost: ' + chickenSevenPrice +'eggs' + ' '+ chickenSevenPriceAdd +'eggs/1sec' + '</div>');
 		},1000);
-	}
-})
+	};
+});
 
 $('#eight').on('click', function(){
 	if (score>chickenEightPrice) {
 		chaching.play();
+		$('#scoreContainer').addClass('animated flash');
 		firstSound.play();
 		$('img').addClass('animated infinite flash');
 		$('.button').addClass('animated infinite flash')
@@ -216,6 +228,7 @@ $('#eight').on('click', function(){
 		chickenEightPrice+=chickenEightPrice
 		chickenEightPriceAdd += 50000000;
 		var intervalOne = setInterval(function(){
+		$('#scoreContainer').removeClass('animated flash');
 		score += 525000000;
 		$('#score').remove()
 		$('#scoreContainer').append('<div id="score">' + score + '</div>');
@@ -223,8 +236,8 @@ $('#eight').on('click', function(){
 		$('#eightText').remove()
 		$('.eightTextContainer').append('<div id="eightText">'+'Cost: ' + chickenEightPrice +'eggs' + ' '+ chickenEightPriceAdd +'eggs/1sec' + '</div>');
 		},1000);
-	}
-})
+	};
+});
 
 function ding() {
 	if (playedDing == false){
