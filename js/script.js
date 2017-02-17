@@ -1,3 +1,10 @@
+// var quackSound;
+
+// function preload() {
+//   quackSound = loadSound('./sounds/58272^quack2.mp3');
+// }
+	
+// console.log(quackSound)
 
 
 var score = 0;
@@ -25,14 +32,25 @@ var chickenEightPrice = 50000000
 //Audio
 var quackSound = $('#quack')[0];
 quackSound.volume = .5;
+
 var backgroundSound = $('#background')[0];
 backgroundSound.volume = 1;
 backgroundSound.loop = true;
+
 var firstSound = $('#first')[0];
 firstSound.volume = .5;
 
+var alert = $('#ding')[0];
+alert.volume = 1;
 
-
+var playedDing = false;
+var playedDingOne = false;
+var playedDingTwo = false;
+var playedDingThree = false;
+var playedDingFour = false;
+var playedDingFive = false;
+var playedDingSix = false;
+var playedDingSeven = false;
 
 backgroundSound.play();
 
@@ -51,20 +69,21 @@ $('.eightTextContainer').append('<div id="eightText">' + 'Cost: 50000000eggs' + 
 $('.button').on('click', function(){
 	console.log(score);
 	quackSound.play();
-	score++
+	score++;
 	updateScore();
 	allCondition();
 });
+
 // FIRST UPGRADE BUTTON
 // if else to check if below 0
 $('#one').on('click', function(){
 	if (score>chickenOnePrice) {
 		quackSound.play();
-		score-=chickenOnePrice
-		chickenOnePrice+=chickenOnePrice
+		score-=chickenOnePrice;
+		chickenOnePrice+=chickenOnePrice;
 		chickenOnePriceAdd += 1;
-		allCondition()
 		var intervalOne = setInterval(function(){
+		allCondition();
 		score += 1;
 		$('#score').remove()
 		$('#scoreContainer').append('<div id="score">' + score + '</div>');
@@ -82,7 +101,6 @@ $('#two').on('click', function(){
 		score-=chickenTwoPrice
 		chickenTwoPrice+=chickenTwoPrice
 		chickenTwoPriceAdd += 100;
-		allCondition()
 		var intervalOne = setInterval(function(){
 		score += 50;
 		$('#score').remove()
@@ -100,7 +118,6 @@ $('#three').on('click', function(){
 		score-=chickenThreePrice
 		chickenThreePrice+=chickenThreePrice
 		chickenThreePriceAdd += 500;
-		allCondition()
 		var intervalOne = setInterval(function(){
 		score += 250;
 		$('#score').remove()
@@ -118,7 +135,6 @@ $('#four').on('click', function(){
 		score-=chickenFourPrice
 		chickenFourPrice+=chickenFourPrice
 		chickenFourPriceAdd += 5000;
-		allCondition()
 		var intervalOne = setInterval(function(){
 		score += 2500;
 		$('#score').remove()
@@ -137,7 +153,6 @@ $('#five').on('click', function(){
 		score-=chickenFivePrice
 		chickenFivePrice+=chickenFivePrice
 		chickenFivePriceAdd += 50000;
-		allCondition()
 		var intervalOne = setInterval(function(){
 		score += 25000;
 		$('#score').remove()
@@ -156,7 +171,6 @@ $('#six').on('click', function(){
 		score-=chickenSixPrice
 		chickenSixPrice+=chickenSixPrice
 		chickenSixPriceAdd += 500000;
-		allCondition()
 		var intervalOne = setInterval(function(){
 		score += 250000;
 		$('#score').remove()
@@ -175,7 +189,6 @@ $('#seven').on('click', function(){
 		score-=chickenSevenPrice
 		chickenSevenPrice+=chickenSevenPrice
 		chickenSevenPriceAdd += 5000000;
-		allCondition()
 		var intervalOne = setInterval(function(){
 		score += 2500000;
 		$('#score').remove()
@@ -197,13 +210,12 @@ $('#eight').on('click', function(){
 		$('#scoreContainer').addClass('animated infinite swing')
 		$('p').addClass('animated infinite hinge')
 		$('body').addClass('animated infinite jello')
-		$('img').addClass('animated infinite bounce');
-		$('.button').addClass('animated infinite flash')
+		$('img').addClass('animated infinite flash');
+		$('.button').addClass('animated infinite bounce')
 		console.log('works')
 		score-=chickenEightPrice
 		chickenEightPrice+=chickenEightPrice
 		chickenEightPriceAdd += 50000000;
-		allCondition()
 		var intervalOne = setInterval(function(){
 		score += 525000000;
 		$('#score').remove()
@@ -215,6 +227,61 @@ $('#eight').on('click', function(){
 	}
 })
 
+function ding() {
+	if (playedDing == false){
+		alert.play();
+		playedDing = true;
+	};
+};
+
+function ding1() {
+	if (playedDingOne == false){
+		alert.play();
+		playedDingOne = true;
+	};
+};
+
+function ding2() {
+	if (playedDingTwo == false){
+		alert.play();
+		playedDingTwo = true;
+	};
+};
+
+function ding3() {
+	if (playedDingThree == false){
+		alert.play();
+		playedDingThree = true;
+	};
+};
+
+function ding4() {
+	if (playedDingFour == false){
+		alert.play();
+		playedDingFour = true;
+	};
+};
+
+function ding5() {
+	if (playedDingFive == false){
+		alert.play();
+		playedDingFive = true;
+	};
+};
+
+function ding6() {
+	if (playedDingSix == false){
+		alert.play();
+		playedDingSix = true;
+	};
+};
+
+function ding7() {
+	if (playedDingSeven == false){
+		alert.play();
+		playedDingSeven = true;
+	};
+};
 
 function updateScore() {
 	$('#score').remove()
@@ -224,87 +291,45 @@ function updateScore() {
 function allCondition() {
 	if(score==10){
 		console.log('works');
-		$('#one')[0].style.display = 'block'
+		ding();
+		$('#one')[0].style.display = 'block';
 		$('p')[0].style.display = 'block';
 	}
 	if(score>100){
-		$('#two')[0].style.display = 'block'
+		ding1();
+		$('#two')[0].style.display = 'block';
 		$('p')[1].style.display = 'block';
 	}
 	if(score>500){
-		$('#three')[0].style.display = 'block'
-		$('p')[2].style.display = 'block'
+		ding2();
+		$('#three')[0].style.display = 'block';
+		$('p')[2].style.display = 'block';
 	}
 	if(score>5000){
-		$('#four')[0].style.display = 'block'
-		$('p')[3].style.display = 'block'
+		ding3();
+		$('#four')[0].style.display = 'block';
+		$('p')[3].style.display = 'block';
 	}
 	if(score>50000){
-		$('#five')[0].style.display = 'block'
-		$('p')[4].style.display = 'block'
+		ding4();
+		$('#five')[0].style.display = 'block';
+		$('p')[4].style.display = 'block';
 	}
 	if(score>500000){
-		$('#six')[0].style.display = 'block'
-		$('p')[5].style.display = 'block'
+		ding5();
+		$('#six')[0].style.display = 'block';
+		$('p')[5].style.display = 'block';
 	}
 	if(score>5000000){
-		$('#seven')[0].style.display = 'block'
-		$('p')[6].style.display = 'block'
+		ding6();
+		$('#seven')[0].style.display = 'block';
+		$('p')[6].style.display = 'block';
 	}
 	if(score>50000000){
-		$('#eight')[0].style.display = 'block'
-		$('p')[7].style.display = 'block'
-	}
+		ding7();
+		$('#eight')[0].style.display = 'block';
+		$('p')[7].style.display = 'block';
+	};
 }
-
-
-$(document).ready(function(){
-    animateDiv();
-    
-});
-
-function makeNewPosition(){
-    
-    // Get viewport dimensions (remove the dimension of the div)
-    var h = $(window).height() - 100;
-    var w = $(window).width() - 100;
-    
-    var nh = Math.floor(Math.random() * h);
-    var nw = Math.floor(Math.random() * w);
-    
-    return [nh,nw];    
-    
-}
-
-function animateDiv(){
-    var newq = makeNewPosition();
-    var oldq = $('.a').offset();
-    var speed = calcSpeed([oldq.top, oldq.left], newq);
-    
-    $('.a').animate({ top: newq[0], left: newq[1] }, speed, function(){
-      animateDiv();        
-    });
-    
-};
-
-function calcSpeed(prev, next) {
-    
-    var x = Math.abs(prev[1] - next[1]);
-    var y = Math.abs(prev[0] - next[0]);
-    
-    var greatest = x > y ? x : y;
-    
-    var speedModifier = 0.1;
-
-    var speed = Math.ceil(greatest/speedModifier);
-
-    return speed;
-}
-
-
-
-
-
-
 
 
