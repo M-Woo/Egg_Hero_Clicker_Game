@@ -76,12 +76,14 @@ $('#one').on('click', function(){
 	if (score>chickenOnePrice) {
 		chaching.play();
 		$('#scoreContainer').addClass('animated flash');
+		$('#one').addClass('animated flash');
 		score-=chickenOnePrice;
 		chickenOnePrice+=chickenOnePrice;
 		chickenOnePriceAdd += 1;
 		var intervalOne = setInterval(function(){
 		allCondition();
 		$('#scoreContainer').removeClass('animated flash');
+		$('#one').removeClass('animated flash');
 		score += 1;
 		$('#score').remove()
 		$('#scoreContainer').append('<div id="score">' + score + '</div>');
