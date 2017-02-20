@@ -98,12 +98,14 @@ $('#two').on('click', function(){
 	if (score>chickenTwoPrice) {
 		chaching.play();
 		$('#scoreContainer').addClass('animated flash');
+		$('#two').addClass('animated flash');
 		console.log('works')
 		score-=chickenTwoPrice
 		chickenTwoPrice+=chickenTwoPrice
 		chickenTwoPriceAdd += 100;
 		var intervalOne = setInterval(function(){
 		$('#scoreContainer').removeClass('animated flash');
+		$('#two').removeClass('animated flash');
 		score += 50;
 		$('#score').remove()
 		$('#scoreContainer').append('<div id="score">' + score + '</div>');
@@ -117,12 +119,14 @@ $('#three').on('click', function(){
 	if (score>chickenThreePrice) {
 		chaching.play();
 		$('#scoreContainer').addClass('animated flash');
+		$('#three').addClass('animated flash');
 		console.log('works')
 		score-=chickenThreePrice
 		chickenThreePrice+=chickenThreePrice
 		chickenThreePriceAdd += 500;
 		var intervalOne = setInterval(function(){
 		$('#scoreContainer').removeClass('animated flash');
+		$('#three').removeClass('animated flash');
 		score += 250;
 		$('#score').remove()
 		$('#scoreContainer').append('<div id="score">' + score + '</div>');
@@ -136,12 +140,14 @@ $('#four').on('click', function(){
 	if (score>chickenFourPrice) {
 		chaching.play();
 		$('#scoreContainer').addClass('animated flash');
+		$('#four').addClass('animated flash');
 		console.log('works')
 		score-=chickenFourPrice
 		chickenFourPrice+=chickenFourPrice
 		chickenFourPriceAdd += 5000;
 		var intervalOne = setInterval(function(){
 		$('#scoreContainer').removeClass('animated flash');
+		$('#four').removeClass('animated flash');
 		score += 2500;
 		$('#score').remove()
 		$('#scoreContainer').append('<div id="score">' + score + '</div>');
@@ -156,12 +162,14 @@ $('#five').on('click', function(){
 	if (score>chickenFivePrice) {
 		chaching.play();
 		$('#scoreContainer').addClass('animated flash');
+		$('#five').addClass('animated flash');
 		console.log('works')
 		score-=chickenFivePrice
 		chickenFivePrice+=chickenFivePrice
 		chickenFivePriceAdd += 50000;
 		var intervalOne = setInterval(function(){
 		$('#scoreContainer').removeClass('animated flash');
+		$('#five').removeClass('animated flash');
 		score += 25000;
 		$('#score').remove()
 		$('#scoreContainer').append('<div id="score">' + score + '</div>');
@@ -176,12 +184,14 @@ $('#six').on('click', function(){
 	if (score>chickenSixPrice) {
 		chaching.play();
 		$('#scoreContainer').addClass('animated flash');
+		$('#six').addClass('animated flash');
 		console.log('works')
 		score-=chickenSixPrice
 		chickenSixPrice+=chickenSixPrice
 		chickenSixPriceAdd += 500000;
 		var intervalOne = setInterval(function(){
 		$('#scoreContainer').removeClass('animated flash');
+		$('#six').removeClass('animated flash');
 		score += 250000;
 		$('#score').remove()
 		$('#scoreContainer').append('<div id="score">' + score + '</div>');
@@ -196,12 +206,14 @@ $('#seven').on('click', function(){
 	if (score>chickenSevenPrice) {
 		chaching.play();
 		$('#scoreContainer').addClass('animated flash');
+		$('#seven').addClass('animated flash');
 		console.log('works')
 		score-=chickenSevenPrice
 		chickenSevenPrice+=chickenSevenPrice
 		chickenSevenPriceAdd += 5000000;
 		var intervalOne = setInterval(function(){
 		$('#scoreContainer').removeClass('animated flash');
+		$('#seven').removeClass('animated flash');
 		score += 2500000;
 		$('#score').remove()
 		$('#scoreContainer').append('<div id="score">' + score + '</div>');
@@ -216,6 +228,7 @@ $('#eight').on('click', function(){
 	if (score>chickenEightPrice) {
 		chaching.play();
 		$('#scoreContainer').addClass('animated flash');
+		$('#eight').addClass('animated flash');
 		firstSound.play();
 		$('img').addClass('animated infinite flash');
 		$('.button').addClass('animated infinite flash')
@@ -231,6 +244,7 @@ $('#eight').on('click', function(){
 		chickenEightPriceAdd += 50000000;
 		var intervalOne = setInterval(function(){
 		$('#scoreContainer').removeClass('animated flash');
+		$('#eight').removeClass('animated flash');
 		score += 525000000;
 		$('#score').remove()
 		$('#scoreContainer').append('<div id="score">' + score + '</div>');
