@@ -1,8 +1,8 @@
 
-
+// Starting Score
 var score = 0;
 
-//Starting eggs per second
+//Starting eggs per second from upgrades
 var chickenOnePriceAdd =  0;
 var chickenTwoPriceAdd = 0;
 var chickenThreePriceAdd = 0;
@@ -24,7 +24,7 @@ var chickenEightPrice = 50000000
 
 //Audio
 var chaching = $('#chaching')[0];
-chaching.volume = 1;
+chaching.volume = .5;
 
 var quackSound = $('#quack')[0];
 quackSound.volume = .5;
@@ -87,7 +87,6 @@ $('#one').on('click', function(){
 		score += 1;
 		$('#score').remove()
 		$('#scoreContainer').append('<div id="score">' + score + '</div>');
-		// console.log(chickenOnePrice + 'chickenOnePrice')
 		$('#oneText').remove()
 		$('.oneTextContainer').append('<div id="oneText">'+'Cost: ' + chickenOnePrice +'eggs' + ' '+ chickenOnePriceAdd +'eggs/1sec' + '</div>');
 		},1000);
@@ -318,7 +317,6 @@ function updateScore() {
 
 function allCondition() {
 	if(score==10){
-		console.log('works');
 		ding();
 		$('#one')[0].style.display = 'block';
 		$('p')[0].style.display = 'block';
