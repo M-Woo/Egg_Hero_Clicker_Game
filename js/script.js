@@ -236,7 +236,7 @@ $('#eight').on('click', function(){
 		$('#scoreContainer').addClass('animated infinite swing')
 		$('p').addClass('animated infinite hinge')
 		$('body').addClass('animated infinite jello')
-		$('img').addClass('animated infinite flash');
+		$('img').addClass('animated infinite bounce');
 		$('.button').addClass('animated infinite bounce')
 		console.log('works')
 		score-=chickenEightPrice
