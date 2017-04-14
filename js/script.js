@@ -2,7 +2,7 @@
 // Starting Score
 var score = 0;
 
-//Starting eggs per second from upgrades
+//Starting eggs you get per second from upgrades
 var chickenOnePriceAdd =  0;
 var chickenTwoPriceAdd = 0;
 var chickenThreePriceAdd = 0;
@@ -39,6 +39,8 @@ firstSound.volume = .5;
 var alert = $('#ding')[0];
 alert.volume = 1;
 
+backgroundSound.play();
+
 var playedDing = false;
 var playedDingOne = false;
 var playedDingTwo = false;
@@ -47,8 +49,6 @@ var playedDingFour = false;
 var playedDingFive = false;
 var playedDingSix = false;
 var playedDingSeven = false;
-
-backgroundSound.play();
 
 $('#scoreContainer').append('<div id="score">' + score + '</div>');
 
@@ -98,7 +98,7 @@ $('#two').on('click', function(){
 		chaching.play();
 		$('#scoreContainer').addClass('animated flash');
 		$('#two').addClass('animated flash');
-		console.log('works')
+		console.log('works');
 		score-=chickenTwoPrice
 		chickenTwoPrice+=chickenTwoPrice
 		chickenTwoPriceAdd += 100;
@@ -106,9 +106,9 @@ $('#two').on('click', function(){
 		$('#scoreContainer').removeClass('animated flash');
 		$('#two').removeClass('animated flash');
 		score += 50;
-		$('#score').remove()
+		$('#score').remove();
 		$('#scoreContainer').append('<div id="score">' + score + '</div>');
-		$('#twoText').remove()
+		$('#twoText').remove();
 		$('.twoTextContainer').append('<div id="twoText">'+'Cost: ' + chickenTwoPrice +'eggs' + ' '+ chickenTwoPriceAdd +'eggs/1sec' + '</div>');
 		},1000);
 	};
@@ -120,16 +120,16 @@ $('#three').on('click', function(){
 		$('#scoreContainer').addClass('animated flash');
 		$('#three').addClass('animated flash');
 		console.log('works')
-		score-=chickenThreePrice
-		chickenThreePrice+=chickenThreePrice
+		score-=chickenThreePrice;
+		chickenThreePrice+=chickenThreePrice;
 		chickenThreePriceAdd += 500;
 		var intervalOne = setInterval(function(){
 		$('#scoreContainer').removeClass('animated flash');
 		$('#three').removeClass('animated flash');
 		score += 250;
-		$('#score').remove()
+		$('#score').remove();
 		$('#scoreContainer').append('<div id="score">' + score + '</div>');
-		$('#threeText').remove()
+		$('#threeText').remove();
 		$('.threeTextContainer').append('<div id="threeText">'+'Cost: ' + chickenThreePrice +'eggs' + ' '+ chickenThreePriceAdd +'eggs/1sec' + '</div>');
 		},1000);
 	};
